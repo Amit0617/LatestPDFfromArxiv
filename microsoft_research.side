@@ -1,0 +1,67 @@
+{
+  "id": "bd772213-22a6-4a8d-9929-4dfb6e670130",
+  "version": "2.0",
+  "name": "microsoft_research",
+  "url": "https://arxiv.org",
+  "tests": [{
+    "id": "e27f65c5-bcdc-483b-95fb-9baadee5039a",
+    "name": "arxiv",
+    "commands": [{
+      "id": "f0c91859-c79d-420b-aabb-fa21685b983a",
+      "comment": "",
+      "command": "open",
+      "target": "/search/advanced?advanced=&terms-0-operator=AND&terms-0-term=&terms-0-field=title&classification-physics_archives=all&classification-include_cross_list=include&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=announced_date_first&abstracts=show&size=25&order=-announced_date_first&start=0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b865b2e6-f7d8-4884-957a-b52132c64f1d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.content",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//main[@id='main-container']/div[2]", "xpath:idRelative"],
+        ["xpath=//main/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "858c382a-ab0e-48ca-af3d-46cf861f24fd",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.arxiv-result:nth-child(1) > .abstract",
+      "targets": [],
+      "value": "108,40.68333435058594"
+    }, {
+      "id": "9f526b56-6660-4602-b6d5-5041c3c05d28",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.arxiv-result:nth-child(1) > .abstract",
+      "targets": [],
+      "value": "108,40.68333435058594"
+    }, {
+      "id": "47012063-bbd0-46fa-ab5f-bd710279371c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=pdf",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f22a7a02-ca0d-434f-bba8-dff861fb5e43",
+      "comment": "",
+      "command": "executeScript",
+      "target": "setTimeout(close, 5000)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c77dfc72-c7b8-4475-9f72-51fe7e52c59f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e27f65c5-bcdc-483b-95fb-9baadee5039a"]
+  }],
+  "urls": ["https://arxiv.org/"],
+  "plugins": []
+}
